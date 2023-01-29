@@ -55,7 +55,7 @@
   .attribution a { color: hsl(228, 45%, 44%); }
 
 body {
-    background-image: url(images/pattern-hills.svg);
+    background-image: url(images/pattern-hills.svg), url(images/bg-stars.svg);
     background-repeat: no-repeat;
     background-size: 230% 150px;   
     background-position: 100% 100%;
