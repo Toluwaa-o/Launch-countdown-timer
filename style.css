@@ -1,0 +1,178 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: auto;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  .attribution { font-size: 11px; text-align: center; }
+  .attribution a { color: hsl(228, 45%, 44%); }
+
+body {
+    background-image: url(images/pattern-hills.svg);
+    background-repeat: no-repeat;
+    background-size: 230% 150px;   
+    background-position: 100% 100%;
+    min-height: 100vh;
+    background-color: hsl(235, 16%, 14%);
+    display: grid;
+    place-content: center;
+    text-align: center;
+    padding: 0 1em;
+    font-family: 'Red Hat Text', sans-serif;
+}
+
+main h1 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    letter-spacing: 5px;
+    margin-bottom: 2em;
+}
+
+.countdown {
+    display: flex;
+    justify-content: space-between;
+}
+
+.countdown > div {
+    position: relative;
+    width: 75px;
+    height: 70px;
+    background: transparent;
+}
+
+.btm {
+    height: 50%;
+    background: hsl(236, 21%, 26%);
+    border-bottom-left-radius: 12%;
+    border-bottom-right-radius: 12%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-bottom: 1px;
+}
+
+.top {
+    height: 50%;
+    background: hsl(236, 21%, 26%);
+    border-top-left-radius: 12%;
+    border-top-right-radius: 12%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.countdown > div > p {
+    position: absolute;
+    top: 6%;
+    left: 14%;
+    font-size: 2.5em;
+    color: hsl(345, 95%, 68%);
+    opacity: 0.9;
+    text-align: center;
+}
+
+.labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+}
+
+.labels > p {
+    width: 70px;
+    font-size: 0.6em;
+    color: hsl(237, 18%, 59%);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin-top: 10em;
+    margin-bottom: 1em;
+}
+
+.icons > svg {
+    fill: #8385A9;
+    transition: fill 0.3s ease;
+}
+
+.icons > svg:hover {
+    fill: hsl(345, 95%, 68%);
+}
+
+@media (min-width: 768px) {
+    body {
+        background-size: contain; 
+    }
+
+    main h1 {
+        font-size: 2em;
+    }
+    
+    .countdown > div {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        background: transparent;
+    }
+
+    .countdown > div > p {
+        top: 6%;
+        left: 12%;
+        font-size: 3.5em;
+    }
+    
+    .labels > p {
+        width: 100px;
+        height: 100px;
+        font-size: 0.8em;
+    }
+}
